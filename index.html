@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Internacional de Violín Pablo Sarasate · Pamplona 2026</title>
+  <meta name="description" content="El festival de violín más prestigioso de España. Pamplona, 3–12 Octubre 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de scroll -->
+  <div id="progress-bar"></div>
+
+  <!-- Capa de palabras flotantes -->
+  <div id="floating-words" aria-hidden="true"></div>
+
+  <!-- Canvas de partículas -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ========================
+       NAVEGACIÓN
+       ======================== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo-wrap">
+        <img
+          src="logo.png"
+          alt="Festival Pablo Sarasate"
+          class="nav-logo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="nav-logo-fallback">PS</div>
+        <div class="nav-brand">
+          <span class="nav-brand-name">PABLO SARASATE</span>
+          <span class="nav-brand-sub">FESTIVAL INTERNACIONAL DE VIOLÍN</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#programa">PROGRAMA</a></li>
+        <li><a href="#artistas">ARTISTAS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+      <a href="#programa" class="btn-entradas">ENTRADAS</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========================
+         HERO
+         ======================== -->
+    <section id="inicio" class="hero">
+
+      <!-- Arte de fondo -->
+      <div class="hero-bg-art" aria-hidden="true">
+
+        <!-- Silueta de violín 3D animada -->
+        <div class="hero-violin">
+          <svg viewBox="0 0 80 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 18 C55 18,70 32,70 52 C70 68,58 76,57 90 C56 102,65 112,65 124 C65 136,56 144,57 158 C58 174,76 192,76 214 C76 232,60 242,40 242 C20 242,4 232,4 214 C4 192,22 174,23 158 C24 144,15 136,15 124 C15 112,24 102,23 90 C22 76,10 68,10 52 C10 32,25 18,40 18 Z"
+              fill="rgba(200,164,74,0.06)" stroke="rgba(200,164,74,0.4)" stroke-width="1.5"/>
+            <rect x="34" y="2" width="12" height="18" rx="2" fill="rgba(200,164,74,0.25)"/>
+            <path d="M34,2 Q40,-1 46,2" fill="rgba(200,164,74,0.35)"/>
+            <!-- Clavija de arco -->
+            <ellipse cx="40" cy="1" rx="5" ry="2.5" fill="rgba(200,164,74,0.3)"/>
+            <!-- Puente -->
+            <line x1="30" y1="135" x2="50" y2="135" stroke="rgba(200,164,74,0.5)" stroke-width="1.8"/>
+            <!-- Efes -->
+            <path d="M25,88 C23,94 23,105 25,110" fill="none" stroke="rgba(200,164,74,0.5)" stroke-width="1.5"/>
+            <path d="M55,88 C57,94 57,105 55,110" fill="none" stroke="rgba(200,164,74,0.5)" stroke-width="1.5"/>
+            <!-- Cuerdas -->
+            <line x1="34" y1="2" x2="34" y2="220" stroke="rgba(200,164,74,0.15)" stroke-width="0.7"/>
+            <line x1="38" y1="2" x2="38" y2="220" stroke="rgba(200,164,74,0.15)" stroke-width="0.7"/>
+            <line x1="42" y1="2" x2="42" y2="220" stroke="rgba(200,164,74,0.15)" stroke-width="0.7"/>
+            <line x1="46" y1="2" x2="46" y2="220" stroke="rgba(200,164,74,0.15)" stroke-width="0.7"/>
+            <!-- Brillo -->
+            <path d="M22,55 Q18,70 22,85" fill="none" stroke="rgba(255,240,180,0.08)" stroke-width="4"/>
+          </svg>
+        </div>
+
+        <!-- Pentagrama animado -->
+        <div class="staff-lines" aria-hidden="true">
+          <div class="staff-line"></div>
+          <div class="staff-line"></div>
+          <div class="staff-line"></div>
+          <div class="staff-line"></div>
+          <div class="staff-line"></div>
+        </div>
+
+        <!-- Clave de sol gigante -->
+        <div class="clef-art">𝄞</div>
+
+        <!-- Orbes de luz 3D -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <!-- Contenido principal del hero -->
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal">● PAMPLONA &nbsp;·&nbsp; 3 – 12 OCTUBRE 2026</div>
+        <h1 class="hero-title">
+          <span class="hero-line-1 reveal">Festival Internacional</span>
+          <span class="hero-line-2 reveal">de Violín</span>
+          <span class="hero-name reveal">Pablo Sarasate</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Tres décadas de excelencia musical en el corazón de Navarra
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#programa" class="btn-primary">DESCUBRIR EL PROGRAMA</a>
+          <a href="#artistas" class="btn-ghost">Ver artistas →</a>
+        </div>
+      </div>
+
+      <div class="hero-overlay"></div>
+    </section>
+
+    <!-- ========================
+         ORGANIZADOR
+         ======================== -->
+    <div class="collab-bar organizador reveal">
+      <span class="collab-label">ORGANIZADOR OFICIAL</span>
+      <div class="collab-divider"></div>
+      <div class="collab-logo" role="img" aria-label="Diario de Navarra">
+        <div class="dn-logo">D</div>
+        <div>
+          <div class="collab-name">Diario de Navarra</div>
+          <div class="collab-sub">DESDE 1903</div>
+        </div>
+      </div>
+      <div class="collab-divider"></div>
+    </div>
+
+    <!-- ========================
+         PATROCINADORES
+         ======================== -->
+    <div class="collab-bar patrocinadores reveal">
+      <span class="collab-label">PATROCINADORES</span>
+      <div class="collab-divider"></div>
+      <div class="collab-logo" role="img" aria-label="Laboral Kutxa">
+        <div class="lk-logo">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="3" width="6" height="6" rx="1" fill="#0078C8" opacity="0.9"/>
+            <rect x="11" y="3" width="6" height="6" rx="1" fill="#0078C8" opacity="0.55"/>
+            <rect x="3" y="11" width="6" height="6" rx="1" fill="#0078C8" opacity="0.55"/>
+            <rect x="11" y="11" width="6" height="6" rx="1" fill="#0078C8" opacity="0.3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="collab-name">Laboral Kutxa</div>
+          <div class="collab-sub lk-sub">PATROCINADOR PRINCIPAL</div>
+        </div>
+      </div>
+      <div class="collab-divider"></div>
+      <a href="#contacto" class="collab-cta">+ COLABORA →</a>
+    </div>
+
+    <!-- ========================
+         COLABORADORES
+         ======================== -->
+    <div class="collab-bar colaboradores reveal">
+      <span class="collab-label">COLABORADORES</span>
+      <div class="collab-divider"></div>
+      <div class="colaboradores-list">
+        <span>Conservatorio Pablo Sarasate</span>
+        <div class="sep"></div>
+        <span>Esc. Música Joaquín Maya</span>
+        <div class="sep"></div>
+        <span>Catedral de Pamplona</span>
+        <div class="sep"></div>
+        <span>Colegio Irabia-Izaga</span>
+      </div>
+      <div class="collab-divider"></div>
+    </div>
+
+    <!-- ========================
+         ABONO
+         ======================== -->
+    <section class="section-abono">
+      <div class="abono-card tilt-card reveal">
+        <!-- Pentagrama de fondo -->
+        <div class="abono-staff" aria-hidden="true">
+          <svg width="100%" height="100%" viewBox="0 0 800 130" preserveAspectRatio="none">
+            <line x1="0" y1="26" x2="800" y2="26" stroke="#C8A44A" stroke-width="0.6" opacity="0.07"/>
+            <line x1="0" y1="46" x2="800" y2="46" stroke="#C8A44A" stroke-width="0.6" opacity="0.07"/>
+            <line x1="0" y1="66" x2="800" y2="66" stroke="#C8A44A" stroke-width="0.6" opacity="0.07"/>
+            <line x1="0" y1="86" x2="800" y2="86" stroke="#C8A44A" stroke-width="0.6" opacity="0.07"/>
+            <line x1="0" y1="106" x2="800" y2="106" stroke="#C8A44A" stroke-width="0.6" opacity="0.07"/>
+            <text x="680" y="100" font-family="serif" font-size="88" fill="#C8A44A" opacity="0.055">𝄞</text>
+          </svg>
+        </div>
+        <!-- Esquinas decorativas -->
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="corner bl"></div><div class="corner br"></div>
+        <!-- Brillo interior -->
+        <div class="abono-glow" aria-hidden="true"></div>
+        <div class="abono-inner">
+          <div class="abono-text">
+            <div class="eyebrow">— ABONO DE FESTIVAL</div>
+            <h2 class="abono-title">Vive el festival<br><em>al completo</em></h2>
+            <p class="abono-desc">18 conciertos &nbsp;·&nbsp; acceso prioritario &nbsp;·&nbsp; eventos exclusivos</p>
+          </div>
+          <div class="abono-divider-v"></div>
+          <div class="abono-cta-wrap">
+            <div class="abono-desde">desde</div>
+            <div class="abono-price">120 <span>€</span></div>
+            <a href="#" class="btn-primary">CONSEGUIR ABONO</a>
+            <div class="abono-note">Plazas limitadas &nbsp;·&nbsp; hasta el 20 sep.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         CONCIERTOS
+         ======================== -->
+    <section id="programa" class="section-conciertos">
+      <div class="section-header reveal">
+        <div class="eyebrow">— PRÓXIMAS ACTUACIONES</div>
+        <h2>No te pierdas ningún concierto</h2>
+      </div>
+
+      <div class="conciertos-list">
+
+        <div class="concierto-row featured tilt-card reveal" data-delay="0">
+          <div class="concierto-date">
+            <span class="day">03</span><span class="month">OCT</span>
+          </div>
+          <div class="concierto-sep"></div>
+          <div class="concierto-info">
+            <div class="concierto-title">Concierto de Apertura</div>
+            <div class="concierto-meta">Augustin Hadelich &nbsp;·&nbsp; Teatro Gayarre &nbsp;·&nbsp; 20:00h</div>
+          </div>
+          <div class="concierto-ticket">
+            <div class="ticket-price">Desde 18 €</div>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
+        </div>
+
+        <div class="concierto-row tilt-card reveal" data-delay="80">
+          <div class="concierto-date">
+            <span class="day">06</span><span class="month">OCT</span>
+          </div>
+          <div class="concierto-sep"></div>
+          <div class="concierto-info">
+            <div class="concierto-title">Recital de Cámara</div>
+            <div class="concierto-meta">Hilary Hahn &nbsp;·&nbsp; Baluarte &nbsp;·&nbsp; 19:30h</div>
+          </div>
+          <div class="concierto-ticket">
+            <div class="ticket-price">Desde 15 €</div>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
+        </div>
+
+        <div class="concierto-row tilt-card reveal" data-delay="160">
+          <div class="concierto-date">
+            <span class="day">09</span><span class="month">OCT</span>
+          </div>
+          <div class="concierto-sep"></div>
+          <div class="concierto-info">
+            <div class="concierto-title">Masterclass Abierta</div>
+            <div class="concierto-meta">Leticia Moreno &nbsp;·&nbsp; Conservatorio de Navarra &nbsp;·&nbsp; 11:00h</div>
+          </div>
+          <div class="concierto-ticket">
+            <div class="ticket-price">Entrada libre</div>
+            <a href="#" class="btn-reservar">RESERVAR</a>
+          </div>
+        </div>
+
+        <div class="concierto-row tilt-card reveal" data-delay="240">
+          <div class="concierto-date">
+            <span class="day">12</span><span class="month">OCT</span>
+          </div>
+          <div class="concierto-sep"></div>
+          <div class="concierto-info">
+            <div class="concierto-title">Gala Final &amp; Entrega de Premios</div>
+            <div class="concierto-meta">Isabelle Faust &nbsp;·&nbsp; Teatro Gayarre &nbsp;·&nbsp; 20:00h</div>
+          </div>
+          <div class="concierto-ticket">
+            <div class="ticket-price">Desde 22 €</div>
+            <a href="#" class="btn-comprar">COMPRAR</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-footer reveal">
+        <a href="#" class="btn-outline">VER PROGRAMA COMPLETO →</a>
+      </div>
+    </section>
+
+    <!-- ========================
+         ARTISTAS
+         ======================== -->
+    <section id="artistas" class="section-artistas">
+      <div class="section-header reveal">
+        <div class="section-header-row">
+          <div>
+            <div class="eyebrow">— ARTISTAS 2026</div>
+            <h2>Solistas invitados</h2>
+          </div>
+          <a href="#" class="link-all">TODOS LOS ARTISTAS →</a>
+        </div>
+      </div>
+
+      <div class="artistas-grid">
+        <div class="artista-card tilt-card reveal" data-delay="0">
+          <div class="artista-glow"></div>
+          <div class="artista-accent-line"></div>
+          <div class="artista-name">Augustin Hadelich</div>
+          <div class="artista-country">VIOLÍN &nbsp;·&nbsp; EEUU</div>
+          <div class="artista-date">3 Oct &nbsp;·&nbsp; Apertura</div>
+          <div class="artista-bottom-bar"></div>
+        </div>
+        <div class="artista-card tilt-card reveal" data-delay="80">
+          <div class="artista-glow"></div>
+          <div class="artista-accent-line"></div>
+          <div class="artista-name">Hilary Hahn</div>
+          <div class="artista-country">VIOLÍN &nbsp;·&nbsp; EEUU</div>
+          <div class="artista-date">6 Oct &nbsp;·&nbsp; Cámara</div>
+          <div class="artista-bottom-bar"></div>
+        </div>
+        <div class="artista-card tilt-card reveal" data-delay="160">
+          <div class="artista-glow"></div>
+          <div class="artista-accent-line"></div>
+          <div class="artista-name">Leticia Moreno</div>
+          <div class="artista-country">VIOLÍN &nbsp;·&nbsp; ESPAÑA</div>
+          <div class="artista-date">9 Oct &nbsp;·&nbsp; Masterclass</div>
+          <div class="artista-bottom-bar"></div>
+        </div>
+        <div class="artista-card tilt-card reveal" data-delay="240">
+          <div class="artista-glow"></div>
+          <div class="artista-accent-line"></div>
+          <div class="artista-name">Isabelle Faust</div>
+          <div class="artista-country">VIOLÍN &nbsp;·&nbsp; ALEMANIA</div>
+          <div class="artista-date">12 Oct &nbsp;·&nbsp; Gala Final</div>
+          <div class="artista-bottom-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         NEWSLETTER + DONACIÓN
+         ======================== -->
+    <section class="section-nl-don">
+      <!-- Newsletter -->
+      <div class="nl-wrap reveal">
+        <div class="eyebrow">— NEWSLETTER</div>
+        <h3 class="nl-title">La música,<br><em>en tu bandeja</em></h3>
+        <p class="nl-desc">Programas, noticias y acceso anticipado a entradas. Sin spam, solo música.</p>
+        <div class="nl-form">
+          <input type="email" placeholder="tu@email.com" class="input-field" aria-label="Correo electrónico">
+          <button class="btn-primary" type="button">SUSCRIBIRSE</button>
+        </div>
+        <div class="nl-note">Sin spam. Baja cuando quieras.</div>
+      </div>
+
+      <!-- Donación / ¿Hablamos? -->
+      <div class="don-wrap reveal">
+        <div class="eyebrow">— APOYA EL FESTIVAL</div>
+        <h3 class="don-title">¿Hablamos?</h3>
+        <p class="don-sub"><em>Tu apoyo hace posible la música</em></p>
+        <div class="don-form">
+          <div class="form-row">
+            <input type="text" placeholder="Nombre" class="input-field" aria-label="Nombre">
+            <input type="email" placeholder="Email" class="input-field" aria-label="Email">
+          </div>
+          <input type="text" placeholder="Empresa u organización (opcional)" class="input-field">
+          <textarea placeholder="Cuéntanos cómo te gustaría colaborar..." class="input-field textarea" aria-label="Mensaje"></textarea>
+          <button class="btn-primary" type="button">ENVIAR MENSAJE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         CONTACTO
+         ======================== -->
+    <section id="contacto" class="section-contacto">
+      <div class="contacto-header reveal">
+        <div class="eyebrow">— CONTACTO</div>
+        <h2 class="contacto-title">Cada nota cuenta.<br><em>Escríbenos.</em></h2>
+      </div>
+
+      <div class="contacto-grid">
+        <!-- Datos -->
+        <div class="contacto-info reveal">
+          <div class="info-group">
+            <div class="info-label">DÓNDE ESTAMOS</div>
+            <address class="info-val">
+              Teatro Gayarre<br>
+              C/ Comedias, 4<br>
+              31001 Pamplona, Navarra
+            </address>
+          </div>
+          <div class="info-divider"></div>
+          <div class="info-group">
+            <div class="info-label">CONTACTO DIRECTO</div>
+            <div class="info-val">
+              info@festivalsarasate.com<br>
+              +34 948 000 000
+            </div>
+          </div>
+          <div class="info-divider"></div>
+          <div class="info-group">
+            <div class="info-label">REDES SOCIALES</div>
+            <div class="social-links">
+              <a href="#">@festivalsarasate — Instagram</a>
+              <a href="#">Festival Pablo Sarasate — YouTube</a>
+              <a href="#">Festival Pablo Sarasate — Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="contacto-form reveal">
+          <div class="form-row">
+            <input type="text" placeholder="Nombre" class="input-field" aria-label="Nombre">
+            <input type="text" placeholder="Apellidos" class="input-field" aria-label="Apellidos">
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="Correo electrónico" class="input-field" aria-label="Email">
+            <input type="tel" placeholder="Teléfono (opcional)" class="input-field" aria-label="Teléfono">
+          </div>
+          <select class="input-field" aria-label="Motivo del contacto">
+            <option value="" disabled selected>Motivo del contacto</option>
+            <option>Información sobre entradas</option>
+            <option>Prensa y acreditaciones</option>
+            <option>Patrocinios y colaboraciones</option>
+            <option>Donaciones</option>
+            <option>Otros</option>
+          </select>
+          <textarea placeholder="Tu mensaje..." class="input-field textarea tall" aria-label="Mensaje"></textarea>
+          <div class="form-footer">
+            <span class="form-note">Respondemos en menos de 48h</span>
+            <button class="btn-primary" type="button">ENVIAR MENSAJE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================
+       FOOTER
+       ======================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">PABLO SARASATE</div>
+      <div class="footer-copy">© 2026 Festival Internacional de Violín · Pamplona, Navarra</div>
+      <div class="footer-social">
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================
+       JAVASCRIPT
+       ======================== -->
+  <script>
+    // ── SCROLL PROGRESS BAR ──────────────────────────────────────────
+    const progressBar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+      const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+
+    // ── NAVBAR SCROLL STATE ──────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── FLOATING WORDS ───────────────────────────────────────────────
+    const WORDS = [
+      'VIRTUOSO','ALLEGRO','FORTE','PAMPLONA','VIOLÍN','ADAGIO',
+      'SONATA','PIZZICATO','CRESCENDO','MMXXVI','SARASATE','NAVARRA',
+      'ANDANTE','PRESTO','STACCATO','LEGATO','FORTISSIMO','PIANISSIMO',
+      'VIVACE','MODERATO','♩','♪','♫','♬','𝄞','𝄢','BRAVO','OVAZIONE'
+    ];
+    const floatingContainer = document.getElementById('floating-words');
+
+    function createFloatingWord() {
+      const el = document.createElement('span');
+      el.textContent = WORDS[Math.floor(Math.random() * WORDS.length)];
+      el.className = 'floating-word';
+      const size = Math.random() * 30 + 10;
+      el.style.cssText = `
+        left: ${Math.random() * 100}vw;
+        font-size: ${size}px;
+        animation-duration: ${Math.random() * 22 + 16}s;
+        animation-delay: ${Math.random() * 4}s;
+        opacity: ${Math.random() * 0.06 + 0.015};
+        letter-spacing: ${Math.random() * 0.3 + 0.1}em;
+      `;
+      floatingContainer.appendChild(el);
+      setTimeout(() => el.remove(), 38000);
+    }
+
+    // Iniciar palabras escalonadas
+    for (let i = 0; i < 14; i++) setTimeout(createFloatingWord, i * 600);
+    setInterval(createFloatingWord, 2200);
+
+    // ── PARTÍCULAS (CANVAS) ──────────────────────────────────────────
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    const NOTES = ['♩','♪','♫','♬','·','·','·'];
+    const particles = [];
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + 20;
+        this.size = Math.random() * 16 + 7;
+        this.speed = Math.random() * 0.7 + 0.25;
+        this.opacity = Math.random() * 0.22 + 0.04;
+        this.drift = (Math.random() - 0.5) * 0.45;
+        this.symbol = NOTES[Math.floor(Math.random() * NOTES.length)];
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.025;
+        this.fadeRate = Math.random() * 0.0008 + 0.0003;
+      }
+      update() {
+        this.y -= this.speed;
+        this.x += this.drift;
+        this.opacity -= this.fadeRate;
+        this.rotation += this.rotSpeed;
+      }
+      draw() {
+        if (this.opacity <= 0) return;
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = '#C8A44A';
+        ctx.font = `${this.size}px serif`;
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.fillText(this.symbol, 0, 0);
+        ctx.restore();
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (Math.random() < 0.045 && particles.length < 60) {
+        particles.push(new Particle());
+      }
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw();
+        if (particles[i].opacity <= 0 || particles[i].y < -30) {
+          particles.splice(i, 1);
+        }
+      }
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    // ── SCROLL REVEAL ────────────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay) || 0;
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── TARJETAS 3D TILT ─────────────────────────────────────────────
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      let animFrame;
+      card.addEventListener('mousemove', e => {
+        cancelAnimationFrame(animFrame);
+        animFrame = requestAnimationFrame(() => {
+          const r = card.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          const rx = ((y - r.height / 2) / r.height) * -14;
+          const ry = ((x - r.width  / 2) / r.width)  *  14;
+          card.style.transition = 'transform 0.08s ease, box-shadow 0.3s, border-color 0.3s';
+          card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px)`;
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        cancelAnimationFrame(animFrame);
+        card.style.transition = 'transform 0.7s cubic-bezier(0.23,1,0.32,1), box-shadow 0.4s, border-color 0.4s';
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+      });
+    });
+
+    // ── PARALLAX DEL HERO ────────────────────────────────────────────
+    const heroSection  = document.querySelector('.hero');
+    const heroViolin   = document.querySelector('.hero-violin');
+    const heroContent  = document.querySelector('.hero-content');
+    const heroOrbs     = document.querySelectorAll('.orb');
+
+    if (heroSection) {
+      heroSection.addEventListener('mousemove', e => {
+        const cx = window.innerWidth  / 2;
+        const cy = window.innerHeight / 2;
+        const dx = (e.clientX - cx) / cx;
+        const dy = (e.clientY - cy) / cy;
+
+        if (heroViolin) {
+          heroViolin.style.transition = 'transform 0.3s ease';
+          heroViolin.style.transform = `translateY(-50%) translate(${dx*20}px, ${dy*12}px) rotateY(${dx*10}deg) rotateX(${dy*-5}deg)`;
+        }
+        if (heroContent) {
+          heroContent.style.transition = 'transform 0.4s ease';
+          heroContent.style.transform = `translate(${dx*-5}px, ${dy*-3}px)`;
+        }
+        heroOrbs.forEach((orb, i) => {
+          const factor = (i + 1) * 8;
+          orb.style.transition = 'transform 0.5s ease';
+          orb.style.transform = `translate(${dx*factor}px, ${dy*factor}px)`;
+        });
+      }, { passive: true });
+
+      heroSection.addEventListener('mouseleave', () => {
+        if (heroViolin) {
+          heroViolin.style.transition = 'transform 1s ease';
+          heroViolin.style.transform = 'translateY(-50%)';
+        }
+        if (heroContent) {
+          heroContent.style.transition = 'transform 0.8s ease';
+          heroContent.style.transform = '';
+        }
+        heroOrbs.forEach(orb => {
+          orb.style.transition = 'transform 1s ease';
+          orb.style.transform = '';
+        });
+      });
+    }
+
+    // ── EFECTO GLITCH EN EL NOMBRE AL HOVER ─────────────────────────
+    const heroName = document.querySelector('.hero-name');
+    if (heroName) {
+      heroName.addEventListener('mouseenter', () => {
+        heroName.classList.add('glitch');
+        setTimeout(() => heroName.classList.remove('glitch'), 600);
+      });
+    }
+
+    // ── SCROLL SUAVE PARA LINKS DE NAV ──────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
