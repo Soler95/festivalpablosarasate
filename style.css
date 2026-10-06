@@ -31,6 +31,7 @@ h1,h2,h3{font-family:var(--font-display);font-weight:400;text-wrap:balance;margi
 .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 
+
 /* ── Nav ── */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
@@ -228,15 +229,17 @@ footer .brand img{width:34px}
 .promo:focus-visible{outline-offset:-4px;outline-color:var(--accent-ink)}
 
 /* ── Inscripción (inscripcion.html) ── */
-.reg{padding-block:clamp(36px,5vw,64px) clamp(56px,7vw,96px)}
-.reg .back{display:inline-block;margin:0 0 24px}
-.reg h1{font-size:clamp(34px,4.4vw,56px);line-height:1.05;margin:10px 0 clamp(28px,4vw,48px)}
+.reg{padding-block:clamp(24px,3vw,40px) clamp(40px,5vw,64px)}
+.reg .back{display:inline-block;margin:0 0 16px}
+.reg h1{font-size:clamp(32px,3.8vw,48px);line-height:1.05;margin:8px 0 clamp(20px,2.5vw,32px)}
 .reg-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:clamp(32px,5vw,72px);align-items:start}
 .prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
-.pricelist h2{font-size:clamp(24px,2.4vw,30px);padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.pricelist h2{font-size:clamp(22px,2.2vw,28px);padding-bottom:10px;border-bottom:1px solid var(--ink)}
+.pricelist .note{margin:12px 0 0;font-size:13.5px;color:var(--accent);font-weight:500}
+.pricelist .inc{display:block;margin-top:4px;font-size:13.5px;line-height:1.4;color:var(--muted)}
 .pricelist dl{margin:0}
-.pricelist dl > div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
-.pricelist dt{font-size:16px}
+.pricelist dl > div{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.pricelist dt{font-size:16px;font-weight:500;min-width:0}
 .pricelist dd{margin:0;font-family:var(--font-display);font-size:26px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .pricelist dd small{font-family:var(--font-body);font-size:13px;color:var(--muted)}
 .signup{background:var(--bg-alt);padding:28px;display:flex;flex-direction:column;gap:14px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px)}
