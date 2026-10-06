@@ -44,72 +44,38 @@
       <div class="label">Masterclasses 2027</div>
       <h1>Inscripción a las masterclasses</h1>
       <p>Clases magistrales de violín durante el festival, del 8 al 14 de marzo de 2027 en Pamplona.</p>
-      <ol class="steps">
-        <li><b>1</b><span>Elige tu modalidad</span></li>
-        <li><b>2</b><span>Reserva tu alojamiento</span></li>
-        <li><b>3</b><span>Rellena el formulario</span></li>
-      </ol>
     </div>
   </div>
 
   <!-- ============================================================
-       PRECIOS · edita aquí nombres, importes y lo que incluye
+       PRECIOS · cambia aquí los importes (— €)
        ============================================================ -->
   <section id="precios">
-    <div class="wrap">
-      <div class="sec-head"><div><div class="label">Paso 1</div><h2>Precios de inscripción</h2></div></div>
-      <div class="tiers">
-        <article class="tier">
-          <div class="label">Alumno activo</div>
-          <div class="price">— €</div>
-          <ul>
-            <li>Clases individuales</li>
-            <li>Participación en el concierto de alumnos</li>
-            <li>Acceso a todos los conciertos del festival</li>
-          </ul>
-        </article>
-        <article class="tier">
-          <div class="label">Oyente</div>
-          <div class="price">— €</div>
-          <ul>
-            <li>Asistencia a todas las clases magistrales</li>
-            <li>Acceso a todos los conciertos del festival</li>
-          </ul>
-        </article>
+    <div class="wrap prices">
+      <div class="pricelist">
+        <h2>Clases</h2>
+        <dl>
+          <div><dt>Alumno activo</dt><dd>— €</dd></div>
+          <div><dt>Oyente</dt><dd>— €</dd></div>
+        </dl>
       </div>
-      <p class="fine">Precios por confirmar. La plaza queda reservada al confirmar el pago.</p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       HOTELES · duplica un bloque <article class="hotel"> por hotel
-       ============================================================ -->
-  <section id="alojamiento" class="alt">
-    <div class="wrap">
-      <div class="sec-head"><div><div class="label">Paso 2</div><h2>Alojamiento</h2></div><p class="sec-sub">Hoteles recomendados para los alumnos del festival.</p></div>
-      <div class="hotels">
-        <article class="hotel">
-          <h3>Hotel por confirmar</h3>
-          <p class="meta">Pamplona · a — min del Conservatorio</p>
-          <p class="rate">Desde — € / noche</p>
-          <p>Indica al reservar que vienes al Festival Pablo Sarasate.</p>
-        </article>
-        <article class="hotel">
-          <h3>Hotel por confirmar</h3>
-          <p class="meta">Pamplona · a — min del Conservatorio</p>
-          <p class="rate">Desde — € / noche</p>
-          <p>Reserva directamente con el hotel.</p>
-        </article>
+      <div class="pricelist">
+        <h2>Alojamiento</h2>
+        <dl>
+          <div><dt>Habitación compartida</dt><dd>— € <small>/ noche</small></dd></div>
+          <div><dt>Habitación individual</dt><dd>— € <small>/ noche</small></dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
-  <section id="formulario">
-    <div class="wrap">
-      <div class="sec-head"><div><div class="label">Paso 3</div><h2>Formulario de inscripción</h2></div><p class="sec-sub">Te confirmaremos la plaza por email.</p></div>
-      <div class="form-box" id="formBox">
-        <p class="form-wait">El formulario de inscripción estará disponible próximamente.</p>
+  <section id="inscribirse" class="alt">
+    <div class="wrap signup">
+      <div>
+        <h2>Solicita tu plaza</h2>
+        <p>Rellena el formulario de inscripción. Si tu solicitud es aceptada, te enviaremos por email un enlace para realizar el pago.</p>
       </div>
+      <a class="btn btn-lg" id="formBtn" href="#" target="_blank" rel="noopener">Ir al formulario de inscripción <span aria-hidden="true">→</span></a>
     </div>
   </section>
 </main>
@@ -123,14 +89,13 @@
 
 <script src="programa.js"></script>
 <script>
-/* Inserta el Google Form si FORM_URL está configurada en programa.js */
+/* Botón de inscripción: usa FORM_URL de programa.js */
 (function(){
-  const box = document.getElementById('formBox');
-  if (!CONFIG.FORM_URL) return;
-  const url = CONFIG.FORM_URL.includes('embedded=true') ? CONFIG.FORM_URL : CONFIG.FORM_URL + (CONFIG.FORM_URL.includes('?') ? '&' : '?') + 'embedded=true';
-  const open = CONFIG.FORM_URL.replace(/[?&]embedded=true/, '');
-  box.innerHTML = `<iframe src="${url}" title="Formulario de inscripción a las masterclasses" loading="lazy">Cargando…</iframe>
-    <p class="form-alt">¿No ves el formulario? <a href="${open}" target="_blank" rel="noopener">Ábrelo en una pestaña nueva</a>.</p>`;
+  const btn = document.getElementById('formBtn');
+  if (CONFIG.FORM_URL) { btn.href = CONFIG.FORM_URL; return; }
+  btn.removeAttribute('href'); btn.removeAttribute('target');
+  btn.classList.add('is-off'); btn.setAttribute('aria-disabled', 'true');
+  btn.textContent = 'Inscripción disponible próximamente';
 })();
 </script>
 </body>
