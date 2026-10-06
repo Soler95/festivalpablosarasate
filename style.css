@@ -82,27 +82,9 @@ section.alt{background:var(--bg-alt)}
 .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
 .sec-head h2{font-size:clamp(30px,3.6vw,46px);line-height:1.08;margin-top:8px}
 
-/* ── Calendar ── */
-.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--line)}
-.day{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:8px;min-height:150px;padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;background:var(--bg);min-width:0}
-.day:hover{background:var(--bg-alt)}
-.day:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
-.day .dow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.day .num{font-family:var(--font-display);font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
-.day ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:12.5px;line-height:1.3}
-.day li{border-left:2px solid var(--accent);padding-left:7px;overflow-wrap:anywhere}
-.day li time{display:block;color:var(--muted);font-variant-numeric:tabular-nums}
-.day .none{font-size:12.5px;color:var(--muted)}
-.day[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.day[aria-pressed="true"] .dow,.day[aria-pressed="true"] li time,.day[aria-pressed="true"] .none{color:inherit;opacity:.7}
-.cal-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:28px 0 8px}
-.cal-bar h3{font-size:24px}
-.linkbtn{background:none;border:0;padding:0;font:inherit;font-size:14px;color:var(--accent);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.notice{font-size:13px;color:var(--muted);border:1px dashed var(--line);padding:10px 14px;margin-bottom:24px}
-.notice[hidden]{display:none}
-
+/* ── Programa: tarjetas de días (index) ── */
 .events{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.ev{display:grid;grid-template-columns:110px 1fr auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.ev{display:grid;grid-template-columns:96px 1fr auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
 .ev .d{font-variant-numeric:tabular-nums}
 .ev .d b{font-family:var(--font-display);font-weight:400;font-size:30px;line-height:1;display:block}
 .ev .d span{font-size:13px;color:var(--muted)}
@@ -161,19 +143,11 @@ footer .brand img{width:34px}
   .info-grid{grid-template-columns:1fr}
 }
 @media (max-width:760px){
-  .cal{grid-template-columns:repeat(7,minmax(0,1fr))}
-  .day{min-height:0;padding:10px 4px;align-items:center;text-align:center;gap:4px}
-  .day ul,.day .none{display:none}
-  .day .num{font-size:24px}
-  .day .dow{font-size:10px;letter-spacing:.06em}
-  .day .dot{display:block;width:6px;height:6px;border-radius:50%;background:var(--accent)}
-  .day .dot.zero{visibility:hidden}
   .ev{grid-template-columns:64px 1fr;gap:16px}
   .ev .buy{grid-column:2;align-items:flex-start;text-align:left;flex-direction:row;align-items:center;gap:14px}
   .past{grid-template-columns:1fr}
   .brand span{font-size:13px}
 }
-@media (min-width:761px){.day .dot{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ── Subpage header ── */
@@ -182,3 +156,98 @@ footer .brand img{width:34px}
 .page-head p{margin:0;color:var(--muted);max-width:60ch}
 .back{display:inline-block;margin-top:40px;font-size:14px;color:var(--accent);text-underline-offset:3px}
 .menu a[aria-current="page"],.menu button[aria-current="page"]{color:var(--accent)}
+
+.sec-sub{margin:0;color:var(--muted);max-width:40ch}
+.days{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.days > li{display:flex;min-width:0}
+.daycard{flex:1;display:flex;flex-direction:column;gap:14px;min-height:230px;padding:16px 14px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:inherit;background:var(--bg);transition:background .2s,color .2s}
+.dc-date{display:flex;flex-direction:column;gap:2px}
+.dc-date .dow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.dc-date .num{font-family:var(--font-display);font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.dc-date .mon{font-size:13px;color:var(--muted)}
+.dc-body{flex:1;display:flex;flex-direction:column;gap:8px;min-width:0}
+.dc-body .count{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.dc-body ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;font-size:13px;line-height:1.3}
+.dc-body li{overflow-wrap:anywhere}
+.dc-body time{display:block;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px}
+.dc-body .more{color:var(--muted)}
+.dc-body .none{margin:0;font-size:13px;color:var(--muted)}
+.dc-go{font-size:13px;font-weight:600;color:var(--accent)}
+.daycard:hover,.daycard:focus-visible{background:var(--ink);color:var(--bg)}
+.daycard:hover .dow,.daycard:hover .mon,.daycard:hover time,.daycard:hover .none,.daycard:hover .more,
+.daycard:focus-visible .dow,.daycard:focus-visible .mon,.daycard:focus-visible time{color:inherit;opacity:.7}
+.daycard:hover .count,.daycard:hover .dc-go,.daycard:focus-visible .dc-go{color:inherit}
+.daycard:focus-visible{outline-offset:-2px}
+.daycard.is-empty .num{color:var(--muted)}
+
+/* ── Página del día (dia.html) ── */
+.day-head .back{margin:0 0 28px}
+.daystrip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:32px;max-width:640px}
+.daystrip a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border:1px solid var(--line);text-decoration:none;color:inherit}
+.daystrip a span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.daystrip a b{font-family:var(--font-display);font-weight:400;font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+.daystrip a:hover{border-color:var(--ink)}
+.daystrip a.is-empty b{color:var(--muted)}
+.daystrip a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.daystrip a[aria-current="page"] span,.daystrip a[aria-current="page"] b{color:inherit}
+.day-events{padding-top:clamp(32px,4vw,56px)}
+.day-list .ev{align-items:start;padding:28px 0}
+.day-list .d b{font-size:34px}
+.day-list h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;margin:6px 0 8px}
+.day-list .who{color:var(--ink);font-size:16px}
+.day-list .where{margin-top:2px}
+.day-list .desc{margin-top:12px;color:var(--ink);max-width:62ch}
+.empty a{color:var(--accent)}
+.daynav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;font-size:15px}
+.daynav a{color:var(--accent);text-underline-offset:3px}
+
+@media (max-width:980px){
+  .days{grid-template-columns:1fr}
+  .daycard{flex-direction:row;align-items:center;min-height:0;gap:18px;padding:16px 4px 16px 14px}
+  .dc-date{flex-direction:row;align-items:baseline;gap:8px;min-width:118px}
+  .dc-date .num{font-size:32px}
+  .dc-go{font-size:0}
+  .dc-go span{font-size:20px}
+}
+@media (max-width:760px){
+  .dc-date{flex-direction:column;align-items:flex-start;min-width:56px;gap:0}
+  .dc-body ul li:nth-child(n+3),.dc-body .more{display:none}
+  .day-list .ev{grid-template-columns:64px 1fr}
+  .day-list .d b{font-size:26px}
+}
+.notice{font-size:13px;color:var(--muted);border:1px dashed var(--line);padding:10px 14px;margin:0 0 24px}
+
+/* ── Banda de inscripción (index) ── */
+.promo{display:block;background:var(--accent);color:var(--accent-ink);text-decoration:none}
+.promo-in{display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding-block:22px}
+.promo-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.promo .label{color:inherit;opacity:.85}
+.promo strong{font-family:var(--font-display);font-weight:400;font-size:clamp(21px,2.3vw,28px);line-height:1.2}
+.promo-btn{display:inline-flex;gap:8px;align-items:center;background:var(--accent-ink);color:var(--accent);font-weight:600;font-size:14px;padding:12px 20px;white-space:nowrap}
+.promo:hover .promo-btn,.promo:focus-visible .promo-btn{background:var(--ink);color:var(--bg)}
+.promo:focus-visible{outline-offset:-4px;outline-color:var(--accent-ink)}
+
+/* ── Inscripción (inscripcion.html) ── */
+.page-head .back{margin:0 0 28px}
+.steps{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px}
+.steps li{display:flex;align-items:center;gap:10px;font-size:15px}
+.steps b{display:grid;place-items:center;width:28px;height:28px;border:1px solid var(--ink);border-radius:50%;font-weight:600;font-size:13px}
+.tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.tier{border-top:1px solid var(--ink);padding-top:20px}
+.tier .price{font-family:var(--font-display);font-size:clamp(40px,5vw,56px);line-height:1;margin:12px 0 18px;font-variant-numeric:tabular-nums}
+.tier ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.tier li{padding-left:18px;position:relative}
+.tier li::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:1.5px;background:var(--accent)}
+.fine{margin:28px 0 0;font-size:14px;color:var(--muted)}
+.hotels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.hotel{background:var(--bg);padding:24px;display:flex;flex-direction:column;gap:6px}
+.hotel h3{font-size:26px;margin-bottom:4px}
+.hotel p{margin:0}
+.hotel .meta{color:var(--muted);font-size:14px}
+.hotel .rate{font-weight:600}
+.form-box{border:1px solid var(--line);min-height:240px;display:flex;flex-direction:column}
+.form-box iframe{width:100%;height:1400px;border:0;display:block}
+.form-wait{margin:auto;padding:40px 24px;text-align:center;color:var(--muted)}
+.form-alt{margin:0;padding:12px 16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.form-alt a{color:var(--accent)}
+@media (max-width:760px){.tiers,.hotels{grid-template-columns:1fr}.promo-btn{width:100%;justify-content:center}}
