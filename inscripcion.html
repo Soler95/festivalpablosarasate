@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Inscripción masterclasses · Festival Pablo Sarasate</title>
+<meta name="description" content="Inscripción a las masterclasses de violín del Festival Pablo Sarasate 2027 en Pamplona: precios, alojamiento y formulario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html#inicio" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
+      <img src="logo.png" alt="" width="46" height="44">
+      <span><b>Pablo Sarasate</b>Festival Internacional de Violín</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#programa">Programa</a></li>
+      <li><a href="index.html#artista">Artista invitado</a></li>
+      <li><a href="inscripcion.html" aria-current="page">Masterclasses</a></li>
+      <li class="has-sub">
+        <button id="subbtn" aria-expanded="false" aria-controls="submenu">Ediciones anteriores</button>
+        <ul class="sub" id="submenu" hidden>
+          <li><a href="edicionesanteriores.html">Todas las ediciones</a></li>
+          <li><span class="label">Artistas invitados</span></li>
+          <li><a href="edicionesanteriores.html#jiyoon-lee">Jiyoon Lee</a></li>
+          <li><a href="edicionesanteriores.html#marlene-ito">Marlene Ito</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#informacion">Información</a></li>
+      <li><a class="btn" href="index.html#programa">Entradas</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="page-head">
+    <div class="wrap">
+      <a class="back" href="index.html">← Volver al festival</a>
+      <div class="label">Masterclasses 2027</div>
+      <h1>Inscripción a las masterclasses</h1>
+      <p>Clases magistrales de violín durante el festival, del 8 al 14 de marzo de 2027 en Pamplona.</p>
+      <ol class="steps">
+        <li><b>1</b><span>Elige tu modalidad</span></li>
+        <li><b>2</b><span>Reserva tu alojamiento</span></li>
+        <li><b>3</b><span>Rellena el formulario</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PRECIOS · edita aquí nombres, importes y lo que incluye
+       ============================================================ -->
+  <section id="precios">
+    <div class="wrap">
+      <div class="sec-head"><div><div class="label">Paso 1</div><h2>Precios de inscripción</h2></div></div>
+      <div class="tiers">
+        <article class="tier">
+          <div class="label">Alumno activo</div>
+          <div class="price">— €</div>
+          <ul>
+            <li>Clases individuales</li>
+            <li>Participación en el concierto de alumnos</li>
+            <li>Acceso a todos los conciertos del festival</li>
+          </ul>
+        </article>
+        <article class="tier">
+          <div class="label">Oyente</div>
+          <div class="price">— €</div>
+          <ul>
+            <li>Asistencia a todas las clases magistrales</li>
+            <li>Acceso a todos los conciertos del festival</li>
+          </ul>
+        </article>
+      </div>
+      <p class="fine">Precios por confirmar. La plaza queda reservada al confirmar el pago.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOTELES · duplica un bloque <article class="hotel"> por hotel
+       ============================================================ -->
+  <section id="alojamiento" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><div><div class="label">Paso 2</div><h2>Alojamiento</h2></div><p class="sec-sub">Hoteles recomendados para los alumnos del festival.</p></div>
+      <div class="hotels">
+        <article class="hotel">
+          <h3>Hotel por confirmar</h3>
+          <p class="meta">Pamplona · a — min del Conservatorio</p>
+          <p class="rate">Desde — € / noche</p>
+          <p>Indica al reservar que vienes al Festival Pablo Sarasate.</p>
+        </article>
+        <article class="hotel">
+          <h3>Hotel por confirmar</h3>
+          <p class="meta">Pamplona · a — min del Conservatorio</p>
+          <p class="rate">Desde — € / noche</p>
+          <p>Reserva directamente con el hotel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formulario">
+    <div class="wrap">
+      <div class="sec-head"><div><div class="label">Paso 3</div><h2>Formulario de inscripción</h2></div><p class="sec-sub">Te confirmaremos la plaza por email.</p></div>
+      <div class="form-box" id="formBox">
+        <p class="form-wait">El formulario de inscripción estará disponible próximamente.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><img src="logo.png" alt="" width="34" height="32"><span>Festival Internacional de Violín Pablo Sarasate</span></span>
+    <span>© 2027 · Pamplona, Navarra</span>
+  </div>
+</footer>
+
+<script src="programa.js"></script>
+<script>
+/* Inserta el Google Form si FORM_URL está configurada en programa.js */
+(function(){
+  const box = document.getElementById('formBox');
+  if (!CONFIG.FORM_URL) return;
+  const url = CONFIG.FORM_URL.includes('embedded=true') ? CONFIG.FORM_URL : CONFIG.FORM_URL + (CONFIG.FORM_URL.includes('?') ? '&' : '?') + 'embedded=true';
+  const open = CONFIG.FORM_URL.replace(/[?&]embedded=true/, '');
+  box.innerHTML = `<iframe src="${url}" title="Formulario de inscripción a las masterclasses" loading="lazy">Cargando…</iframe>
+    <p class="form-alt">¿No ves el formulario? <a href="${open}" target="_blank" rel="noopener">Ábrelo en una pestaña nueva</a>.</p>`;
+})();
+</script>
+</body>
+</html>
