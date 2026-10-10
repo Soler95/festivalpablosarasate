@@ -5,23 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Ediciones anteriores · Festival Pablo Sarasate</title>
 <meta name="description" content="Artistas invitados de ediciones anteriores del Festival Internacional de Violín Pablo Sarasate.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<meta name="theme-color" content="#141312">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Festival Internacional de Violín Pablo Sarasate">
+<meta property="og:title" content="Ediciones anteriores · Festival Pablo Sarasate">
+<meta property="og:description" content="Artistas invitados de ediciones anteriores del Festival Internacional de Violín Pablo Sarasate.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html#inicio" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
-      <img src="logo.png" alt="" width="46" height="44">
+    <a class="brand" href="index.html" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
+      <img src="logo.png" alt="" width="44" height="42">
       <span><b>Pablo Sarasate</b>Festival Internacional de Violín</span>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
+      <li><a href="index.html#festival">El festival</a></li>
       <li><a href="index.html#programa">Programa</a></li>
-      <li><a href="index.html#artista">Artistas invitados</a></li>
-      <li><a href="inscripcion.html">Masterclasses</a></li>
+      <li><a href="index.html#artistas">Artistas</a></li>
       <li class="has-sub">
         <button id="subbtn" aria-expanded="false" aria-controls="submenu" aria-current="page">Ediciones anteriores</button>
         <ul class="sub" id="submenu" hidden>
@@ -32,46 +44,74 @@
         </ul>
       </li>
       <li><a href="index.html#informacion">Información</a></li>
-      <li><a class="btn" href="index.html#programa">Entradas</a></li>
+      <li class="lang"><a href="en/past-editions.html" hreflang="en" lang="en" aria-label="English version">EN</a></li>
+      <li><a class="btn" href="inscripcion.html">Masterclasses</a></li>
     </ul>
   </div>
 </header>
 
-<main id="inicio">
+<main id="main">
   <div class="page-head">
     <div class="wrap">
-      <div class="label">Ediciones anteriores</div>
-      <h1>Artistas invitados</h1>
+      <a class="back" href="index.html">← Volver al festival</a>
+      <div class="label">Archivo</div>
+      <h1>Ediciones anteriores</h1>
       <p>Violinistas que han pasado por el Festival Internacional de Violín Pablo Sarasate.</p>
     </div>
   </div>
-
   <section>
     <div class="wrap">
-      <div class="past">
-        <article id="jiyoon-lee">
-          <div class="label">Primera edición</div>
-          <h3>Jiyoon Lee</h3>
-          <p>Concertino de la Staatskapelle Berlin.</p>
-        </article>
-        <article id="marlene-ito">
-          <div class="label">Primera edición</div>
-          <h3>Marlene Ito</h3>
-          <p>Violinista.</p>
-        </article>
+      <div class="edition">
+        <div><div class="label">Primera edición</div><h2>Artistas invitados</h2></div>
+        <div class="past">
+          <article id="jiyoon-lee">
+            <span class="label">Violín</span>
+            <h3>Jiyoon Lee</h3>
+            <p class="role">Concertino de la Staatskapelle Berlin</p>
+          </article>
+          <article id="marlene-ito">
+            <span class="label">Violín</span>
+            <h3>Marlene Ito</h3>
+            <p class="role">Violinista invitada</p>
+          </article>
+        </div>
       </div>
-      <a class="back" href="index.html">← Volver al festival 2027</a>
+      <p style="margin-top:48px"><a class="link" href="index.html">Descubre la edición 2027 <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span class="brand"><img src="logo.png" alt="" width="34" height="32"><span>Festival Internacional de Violín Pablo Sarasate</span></span>
-    <span>© 2027 · Pamplona, Navarra</span>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="logo.png" alt="" width="52" height="49">
+        <div><b>Festival Internacional de Violín Pablo Sarasate</b><p>Segunda edición · Pamplona, 8 – 14 de marzo de 2027</p></div>
+      </div>
+      <div>
+        <span class="label">Festival</span>
+        <ul>
+          <li><a href="index.html#programa">Programa</a></li>
+          <li><a href="index.html#artistas">Artistas invitados</a></li>
+          <li><a href="inscripcion.html">Masterclasses</a></li>
+          <li><a href="edicionesanteriores.html">Ediciones anteriores</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Contacto</span>
+        <ul>
+          <li><a href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a></li>
+          <li>Pamplona, Navarra</li>
+          <li>Organiza: Fundación Diario de Navarra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Festival Internacional de Violín Pablo Sarasate</span>
+      <nav aria-label="Legal"><a href="legal.html">Aviso legal y privacidad</a><a href="en/past-editions.html" hreflang="en" lang="en">English</a></nav>
+    </div>
   </div>
 </footer>
-
 <script src="programa.js"></script>
 </body>
 </html>

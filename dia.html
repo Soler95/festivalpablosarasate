@@ -4,24 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Programa del día · Festival Pablo Sarasate</title>
-<meta name="description" content="Programa diario del Festival Internacional de Violín Pablo Sarasate, Pamplona, 8–14 de marzo de 2027.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<meta name="description" content="Programa diario del Festival Internacional de Violín Pablo Sarasate, Pamplona, 8 – 14 de marzo de 2027.">
+<meta name="theme-color" content="#141312">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Festival Internacional de Violín Pablo Sarasate">
+<meta property="og:title" content="Programa del día · Festival Pablo Sarasate">
+<meta property="og:description" content="Programa diario del Festival Internacional de Violín Pablo Sarasate, Pamplona, 8 – 14 de marzo de 2027.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html#inicio" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
-      <img src="logo.png" alt="" width="46" height="44">
+    <a class="brand" href="index.html" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
+      <img src="logo.png" alt="" width="44" height="42">
       <span><b>Pablo Sarasate</b>Festival Internacional de Violín</span>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
-      <li><a href="index.html#programa">Programa</a></li>
-      <li><a href="index.html#artista">Artistas invitados</a></li>
-      <li><a href="inscripcion.html">Masterclasses</a></li>
+      <li><a href="index.html#festival">El festival</a></li>
+      <li><a href="index.html#programa" aria-current="page">Programa</a></li>
+      <li><a href="index.html#artistas">Artistas</a></li>
       <li class="has-sub">
         <button id="subbtn" aria-expanded="false" aria-controls="submenu">Ediciones anteriores</button>
         <ul class="sub" id="submenu" hidden>
@@ -32,13 +44,14 @@
         </ul>
       </li>
       <li><a href="index.html#informacion">Información</a></li>
-      <li><a class="btn" href="index.html#programa">Entradas</a></li>
+      <li class="lang"><a href="en/day.html" hreflang="en" lang="en" aria-label="English version" data-keep-hash>EN</a></li>
+      <li><a class="btn" href="inscripcion.html">Masterclasses</a></li>
     </ul>
   </div>
 </header>
 
-<main id="inicio">
-  <div class="page-head day-head">
+<main id="main">
+  <div class="page-head">
     <div class="wrap">
       <a class="back" href="index.html#programa">← Programa completo</a>
       <div class="label">Festival Pablo Sarasate · Pamplona 2027</div>
@@ -47,11 +60,10 @@
       <nav class="daystrip" id="strip" aria-label="Días del festival"></nav>
     </div>
   </div>
-
   <section class="day-events">
     <div class="wrap">
-      <p class="notice" id="notice" hidden>Programa provisional: los eventos que ves son de ejemplo y se sustituirán por los de la hoja de cálculo del festival.</p>
-      <ol class="events day-list" id="events"></ol>
+      <p class="demo-note" id="demoNote" hidden>Vista de prueba con eventos de ejemplo (?demo). El público no ve estos eventos.</p>
+      <ol class="events" id="events"></ol>
       <nav class="daynav" id="daynav" aria-label="Día anterior y siguiente"></nav>
     </div>
   </section>
@@ -59,16 +71,40 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><img src="logo.png" alt="" width="34" height="32"><span>Festival Internacional de Violín Pablo Sarasate</span></span>
-    <span>© 2027 · Pamplona, Navarra</span>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="logo.png" alt="" width="52" height="49">
+        <div><b>Festival Internacional de Violín Pablo Sarasate</b><p>Segunda edición · Pamplona, 8 – 14 de marzo de 2027</p></div>
+      </div>
+      <div>
+        <span class="label">Festival</span>
+        <ul>
+          <li><a href="index.html#programa">Programa</a></li>
+          <li><a href="index.html#artistas">Artistas invitados</a></li>
+          <li><a href="inscripcion.html">Masterclasses</a></li>
+          <li><a href="edicionesanteriores.html">Ediciones anteriores</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Contacto</span>
+        <ul>
+          <li><a href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a></li>
+          <li>Pamplona, Navarra</li>
+          <li>Organiza: Fundación Diario de Navarra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Festival Internacional de Violín Pablo Sarasate</span>
+      <nav aria-label="Legal"><a href="legal.html">Aviso legal y privacidad</a><a href="en/day.html" hreflang="en" lang="en" data-keep-hash>English</a></nav>
+    </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="vendor/papaparse.min.js"></script>
 <script src="programa.js"></script>
 <script>
-const P = Programa;
-let EVENTS = [];
+const P = Programa, t = P.t;
+let EVENTS = [], STATUS = 'pending';
 
 function currentKey(){
   const k = decodeURIComponent(location.hash.replace('#',''));
@@ -78,15 +114,14 @@ function currentKey(){
 function render(){
   const key = currentKey(), idx = P.days.findIndex(d => P.iso(d) === key), d = P.days[idx];
   const evs = P.forDay(EVENTS, key);
-  document.title = `${P.longDate(d)} · Festival Pablo Sarasate`;
+  document.title = `${P.longDate(d)} · ${t.title}`;
   document.getElementById('dTitle').textContent = P.longDate(d);
-  document.getElementById('dSub').textContent = evs.length
-    ? `${evs.length} ${evs.length === 1 ? 'evento' : 'eventos'} · Día ${idx+1} de ${P.days.length} del festival`
-    : `Día ${idx+1} de ${P.days.length} del festival`;
+  document.getElementById('dSub').textContent = (evs.length ? `${evs.length} ${evs.length === 1 ? t.event : t.events} · ` : '') + t.dayOf(idx+1, P.days.length);
+  const q = STATUS === 'demo' ? '?demo' : '';
 
   document.getElementById('strip').innerHTML = P.days.map(x => {
     const k = P.iso(x), n = P.forDay(EVENTS, k).length;
-    return `<a href="#${k}"${k === key ? ' aria-current="page"' : ''} class="${n ? '' : 'is-empty'}"><span>${P.DOW[x.getDay()]}</span><b>${x.getDate()}</b></a>`;
+    return `<a href="${q}#${k}"${k === key ? ' aria-current="page"' : ''} class="${n ? '' : 'is-empty'}"><span>${P.DOW[x.getDay()]}</span><b>${x.getDate()}</b></a>`;
   }).join('');
 
   document.getElementById('events').innerHTML = evs.length ? evs.map(e => `<li class="ev">
@@ -98,19 +133,21 @@ function render(){
         ${e.lugar ? `<p class="where">${P.esc(e.lugar)}</p>` : ''}
         ${e.descripcion ? `<p class="desc">${P.esc(e.descripcion)}</p>` : ''}
       </div>
-      <div class="buy">${e.precio ? `<span class="price">${P.esc(e.precio)}</span>` : ''}${e.entradas ? `<a class="btn" href="${P.esc(e.entradas)}" target="_blank" rel="noopener">Entradas</a>` : ''}</div>
+      <div class="buy">${e.precio ? `<span class="price">${P.esc(e.precio)}</span>` : ''}${e.entradas ? `<a class="btn" href="${P.esc(e.entradas)}" target="_blank" rel="noopener">${t.tickets}</a>` : ''}</div>
     </li>`).join('')
-    : `<li class="empty">No hay eventos programados este día. <a href="index.html#programa">Ver el resto del programa</a>.</li>`;
+    : (STATUS === 'pending'
+        ? `<li class="empty">${t.pendingDay} <a href="index.html#programa">${t.backProgram}</a>.</li>`
+        : `<li class="empty">${t.emptyDay} <a href="index.html#programa">${t.seeRest}</a>.</li>`);
 
   const prev = P.days[idx-1], next = P.days[idx+1];
   document.getElementById('daynav').innerHTML =
-    (prev ? `<a href="#${P.iso(prev)}">← ${P.longDate(prev)}</a>` : '<span></span>') +
-    (next ? `<a href="#${P.iso(next)}">${P.longDate(next)} →</a>` : '<span></span>');
+    (prev ? `<a href="${q}#${P.iso(prev)}">← ${P.longDate(prev)}</a>` : '<span></span>') +
+    (next ? `<a href="${q}#${P.iso(next)}">${P.longDate(next)} →</a>` : '<span></span>');
 }
 
 window.addEventListener('hashchange', () => { render(); window.scrollTo({top: 0}); });
 render();
-P.load((events, isSample) => { EVENTS = events; document.getElementById('notice').hidden = !isSample; render(); });
+P.load((events, status) => { EVENTS = events; STATUS = status; document.getElementById('demoNote').hidden = status !== 'demo'; render(); });
 </script>
 </body>
 </html>

@@ -3,25 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Inscripción masterclasses · Festival Pablo Sarasate</title>
-<meta name="description" content="Inscripción a las masterclasses de violín del Festival Pablo Sarasate 2027 en Pamplona: precios, alojamiento y formulario.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<title>Masterclasses de violín 2027 · Festival Pablo Sarasate</title>
+<meta name="description" content="Masterclasses de violín con Miguel Colom en el Festival Pablo Sarasate 2027, Pamplona: precios, alojamiento e inscripción.">
+<meta name="theme-color" content="#141312">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Festival Internacional de Violín Pablo Sarasate">
+<meta property="og:title" content="Masterclasses de violín 2027 · Festival Pablo Sarasate">
+<meta property="og:description" content="Masterclasses de violín con Miguel Colom en el Festival Pablo Sarasate 2027, Pamplona: precios, alojamiento e inscripción.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html#inicio" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
-      <img src="logo.png" alt="" width="46" height="44">
+    <a class="brand" href="index.html" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
+      <img src="logo.png" alt="" width="44" height="42">
       <span><b>Pablo Sarasate</b>Festival Internacional de Violín</span>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
+      <li><a href="index.html#festival">El festival</a></li>
       <li><a href="index.html#programa">Programa</a></li>
-      <li><a href="index.html#artista">Artistas invitados</a></li>
-      <li><a href="inscripcion.html" aria-current="page">Masterclasses</a></li>
+      <li><a href="index.html#artistas">Artistas</a></li>
       <li class="has-sub">
         <button id="subbtn" aria-expanded="false" aria-controls="submenu">Ediciones anteriores</button>
         <ul class="sub" id="submenu" hidden>
@@ -32,44 +44,66 @@
         </ul>
       </li>
       <li><a href="index.html#informacion">Información</a></li>
-      <li><a class="btn" href="index.html#programa">Entradas</a></li>
+      <li class="lang"><a href="en/masterclasses.html" hreflang="en" lang="en" aria-label="English version">EN</a></li>
+      <li><a class="btn" href="inscripcion.html" aria-current="page">Masterclasses</a></li>
     </ul>
   </div>
 </header>
 
-<main id="inicio">
-  <section class="reg">
+<main id="main">
+  <div class="page-head">
     <div class="wrap">
       <a class="back" href="index.html">← Volver al festival</a>
-      <div class="label">Masterclasses 2027 · 8 – 14 de marzo · Pamplona</div>
-      <h1>Inscripción a las masterclasses</h1>
+      <div class="label">Masterclasses 2027</div>
+      <h1>Masterclasses de violín</h1>
+      <p class="lead">Clases magistrales con Miguel Colom, concertino de la Orquesta Nacional de España, durante la semana del festival en Pamplona.</p>
+      <dl class="keyfacts">
+        <div><dt>Fechas</dt><dd>8 – 14 de marzo de 2027</dd></div>
+        <div><dt>Profesor</dt><dd>Miguel Colom</dd></div>
+        <div><dt>Sede</dt><dd>Conservatorio Pablo Sarasate</dd></div>
+      </dl>
+    </div>
+  </div>
 
+  <section>
+    <div class="wrap">
       <div class="reg-grid">
-        <!-- ============================================================
-             PRECIOS · cambia aquí los importes (— €)
-             ============================================================ -->
-        <div class="prices">
-          <div class="pricelist">
-            <h2>Clases</h2>
-            <dl>
-              <div><dt>Alumno activo<span class="inc">Dos clases de una hora y acceso a todos los eventos del festival</span></dt><dd>— €</dd></div>
-              <div><dt>Oyente<span class="inc">Acceso a todos los eventos del festival</span></dt><dd>— €</dd></div>
-            </dl>
+        <div>
+          <!-- ============================================================
+               PRECIOS · cuando estén fijados, sustituye
+               <dd class="tba">Por anunciar</dd>   por   <dd>250 €</dd>
+               (alojamiento:  <dd>40 € <small>/ noche</small></dd>)
+               ============================================================ -->
+          <div class="prices">
+            <div class="pricelist">
+              <h2>Clases</h2>
+              <dl>
+                <div><dt>Alumno activo<span class="inc">Dos clases de una hora y acceso a todos los eventos del festival</span></dt><dd class="tba">Por anunciar</dd></div>
+                <div><dt>Oyente<span class="inc">Acceso a todos los eventos del festival</span></dt><dd class="tba">Por anunciar</dd></div>
+              </dl>
+            </div>
+            <div class="pricelist">
+              <h2>Alojamiento</h2>
+              <dl>
+                <div><dt>Habitación compartida</dt><dd class="tba">Por anunciar</dd></div>
+                <div><dt>Habitación individual</dt><dd class="tba">Por anunciar</dd></div>
+              </dl>
+              <p class="note">Tarifas de alojamiento exclusivas para alumnos de las masterclasses.</p>
+            </div>
           </div>
-          <div class="pricelist">
-            <h2>Alojamiento</h2>
-            <dl>
-              <div><dt>Habitación compartida</dt><dd>— € <small>/ noche</small></dd></div>
-              <div><dt>Habitación individual</dt><dd>— € <small>/ noche</small></dd></div>
-            </dl>
-            <p class="note">Precios de alojamiento exclusivos para alumnos de las masterclasses.</p>
-          </div>
+
+          <ol class="steps" aria-label="Cómo funciona la inscripción">
+            <li><h3>Solicitud</h3><p>Rellena el formulario de inscripción online.</p></li>
+            <li><h3>Confirmación</h3><p>Te comunicaremos por email si tu plaza ha sido aceptada.</p></li>
+            <li><h3>Pago</h3><p>Recibirás un enlace de pago para confirmar tu plaza.</p></li>
+          </ol>
         </div>
 
         <aside class="signup">
           <h2>Solicita tu plaza</h2>
           <p>Rellena el formulario de inscripción. Si tu solicitud es aceptada, te enviaremos por email un enlace para realizar el pago.</p>
-          <a class="btn btn-lg" id="formBtn" href="#" target="_blank" rel="noopener">Ir al formulario de inscripción <span aria-hidden="true">→</span></a>
+          <a class="btn btn-lg" id="formBtn" href="#" target="_blank" rel="noopener" data-off="Inscripción disponible próximamente">Ir al formulario de inscripción <span aria-hidden="true">→</span></a>
+          <p class="small" id="formHint" hidden>¿Quieres que te avisemos cuando se abra? Escríbenos a <a href="mailto:info@festivalsarasate.com?subject=Masterclasses%202027">info@festivalsarasate.com</a>.</p>
         </aside>
       </div>
     </div>
@@ -78,21 +112,35 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><img src="logo.png" alt="" width="34" height="32"><span>Festival Internacional de Violín Pablo Sarasate</span></span>
-    <span>© 2027 · Pamplona, Navarra</span>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="logo.png" alt="" width="52" height="49">
+        <div><b>Festival Internacional de Violín Pablo Sarasate</b><p>Segunda edición · Pamplona, 8 – 14 de marzo de 2027</p></div>
+      </div>
+      <div>
+        <span class="label">Festival</span>
+        <ul>
+          <li><a href="index.html#programa">Programa</a></li>
+          <li><a href="index.html#artistas">Artistas invitados</a></li>
+          <li><a href="inscripcion.html">Masterclasses</a></li>
+          <li><a href="edicionesanteriores.html">Ediciones anteriores</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Contacto</span>
+        <ul>
+          <li><a href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a></li>
+          <li>Pamplona, Navarra</li>
+          <li>Organiza: Fundación Diario de Navarra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Festival Internacional de Violín Pablo Sarasate</span>
+      <nav aria-label="Legal"><a href="legal.html">Aviso legal y privacidad</a><a href="en/masterclasses.html" hreflang="en" lang="en">English</a></nav>
+    </div>
   </div>
 </footer>
-
 <script src="programa.js"></script>
-<script>
-/* Botón de inscripción: usa FORM_URL de programa.js */
-(function(){
-  const btn = document.getElementById('formBtn');
-  if (CONFIG.FORM_URL) { btn.href = CONFIG.FORM_URL; return; }
-  btn.removeAttribute('href'); btn.removeAttribute('target');
-  btn.classList.add('is-off'); btn.setAttribute('aria-disabled', 'true');
-  btn.textContent = 'Inscripción disponible próximamente';
-})();
-</script>
 </body>
 </html>

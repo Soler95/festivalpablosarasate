@@ -3,25 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Festival Pablo Sarasate 2027</title>
-<meta name="description" content="Festival Internacional de Violín Pablo Sarasate · Pamplona, 8–14 de marzo de 2027. Artistas invitados: Miguel Colom y Hande Küden.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Instrument+Sans:wght@400;500;600&display=swap">
+<title>Festival Internacional de Violín Pablo Sarasate 2027 · Pamplona</title>
+<meta name="description" content="Festival Internacional de Violín Pablo Sarasate · Pamplona, 8 – 14 de marzo de 2027. Conciertos y masterclasses con Miguel Colom y Hande Küden.">
+<meta name="theme-color" content="#141312">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Festival Internacional de Violín Pablo Sarasate">
+<meta property="og:title" content="Festival Internacional de Violín Pablo Sarasate 2027 · Pamplona">
+<meta property="og:description" content="Festival Internacional de Violín Pablo Sarasate · Pamplona, 8 – 14 de marzo de 2027. Conciertos y masterclasses con Miguel Colom y Hande Küden.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Festival",
+ "name": "Festival Internacional de Violín Pablo Sarasate 2027",
+ "description": "Segunda edición del Festival Internacional de Violín Pablo Sarasate: conciertos y clases magistrales en Pamplona.",
+ "startDate": "2027-03-08",
+ "endDate": "2027-03-14",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+ "inLanguage": "es",
+ "location": {
+  "@type": "Place",
+  "name": "Pamplona",
+  "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Pamplona",
+   "addressRegion": "Navarra",
+   "addressCountry": "ES"
+  }
+ },
+ "organizer": {
+  "@type": "Organization",
+  "name": "Fundación Diario de Navarra"
+ },
+ "sponsor": {
+  "@type": "Organization",
+  "name": "Laboral Kutxa"
+ },
+ "performer": [
+  {
+   "@type": "Person",
+   "name": "Miguel Colom"
+  },
+  {
+   "@type": "Person",
+   "name": "Hande Küden"
+  }
+ ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
-      <img src="logo.png" alt="" width="46" height="44">
+    <a class="brand" href="#" aria-label="Festival Internacional de Violín Pablo Sarasate, inicio">
+      <img src="logo.png" alt="" width="44" height="42">
       <span><b>Pablo Sarasate</b>Festival Internacional de Violín</span>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
+      <li><a href="#festival">El festival</a></li>
       <li><a href="#programa">Programa</a></li>
-      <li><a href="#artista">Artistas invitados</a></li>
-      <li><a href="inscripcion.html">Masterclasses</a></li>
+      <li><a href="#artistas">Artistas</a></li>
       <li class="has-sub">
         <button id="subbtn" aria-expanded="false" aria-controls="submenu">Ediciones anteriores</button>
         <ul class="sub" id="submenu" hidden>
@@ -32,83 +85,114 @@
         </ul>
       </li>
       <li><a href="#informacion">Información</a></li>
-      <li><a class="btn" href="#programa">Entradas</a></li>
+      <li class="lang"><a href="en/index.html" hreflang="en" lang="en" aria-label="English version">EN</a></li>
+      <li><a class="btn" href="inscripcion.html">Masterclasses</a></li>
     </ul>
   </div>
 </header>
 
-<main id="inicio">
+<main id="main">
   <div class="hero" id="hero">
-    <img class="photo" id="heroPhoto" alt="Pamplona" fetchpriority="high">
+    <img class="photo" id="heroPhoto" alt="Ayuntamiento de Pamplona" fetchpriority="high">
     <img class="fallback-mark" src="logo.png" alt="">
-    <div class="hero-text">
+    <div class="hero-text" id="inicio">
       <div class="wrap">
         <div class="when">Pamplona · 8 – 14 de marzo de 2027</div>
         <h1><span>Festival Internacional de Violín</span> <em>Pablo Sarasate</em></h1>
-        <p class="guest">Artistas invitados: <strong>Miguel Colom</strong> (concertino de la Orquesta Nacional de España) y <strong>Hande Küden</strong> (Filarmónica de Berlín)</p>
+        <p class="guest">Segunda edición, con <strong>Miguel Colom</strong>, concertino de la Orquesta Nacional de España, y <strong>Hande Küden</strong>, violinista de la Filarmónica de Berlín.</p>
         <div class="hero-actions">
           <a class="btn" href="#programa">Ver programa</a>
-          <a class="btn ghost" href="#artista">Conocer a los artistas</a>
+          <a class="btn ghost" href="#artistas">Conocer a los artistas</a>
         </div>
       </div>
     </div>
-    <span class="credit" id="heroCredit">Foto: Wikimedia Commons</span>
+    <span class="credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_Pamplona,_Pamplona_(ES)_-_panoramio.jpg" target="_blank" rel="noopener">Michael Newman</a> · <a href="https://creativecommons.org/licenses/by/3.0/deed.es" target="_blank" rel="noopener">CC BY 3.0</a></span>
   </div>
 
   <a class="promo" href="inscripcion.html">
     <span class="wrap promo-in">
       <span class="promo-text">
         <span class="label">Masterclasses 2027 · 8 – 14 de marzo · Pamplona</span>
-        <strong>Inscríbete a las masterclasses</strong>
+        <strong>Inscríbete en las masterclasses de violín</strong>
       </span>
-      <span class="promo-btn">Ver precios e inscripción <span aria-hidden="true">→</span></span>
+      <span class="promo-btn">Precios e inscripción <span aria-hidden="true">→</span></span>
     </span>
   </a>
 
-  <section id="programa">
+  <section id="festival">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <div class="label">El festival</div>
+          <h2>Una semana de violín en la ciudad de Sarasate</h2>
+        </div>
+        <div class="text">
+          <p>El Festival Internacional de Violín Pablo Sarasate reúne en Pamplona a violinistas de primer nivel y a jóvenes intérpretes durante una semana de conciertos y clases magistrales.</p>
+          <p>La segunda edición se celebra del 8 al 14 de marzo de 2027, la semana del aniversario del nacimiento de Sarasate, el 10 de marzo. Los conciertos y las clases se reparten entre la Catedral de Pamplona, el Conservatorio Pablo Sarasate y Civivox.</p>
+          <dl class="facts">
+            <div><dt>7</dt><dd>días de conciertos y clases</dd></div>
+            <div><dt>3</dt><dd>sedes en Pamplona</dd></div>
+            <div><dt>II</dt><dd>edición</dd></div>
+          </dl>
+        </div>
+      </div>
+      <aside class="sarasate">
+        <img src="logo.png" alt="" width="72" height="68">
+        <div>
+          <div class="label">Pablo Sarasate · 1844 – 1908</div>
+          <h3>El violinista de Pamplona</h3>
+          <p>Nacido en Pamplona, Pablo Sarasate fue uno de los grandes virtuosos del violín del siglo XIX. Autor de obras como <i>Aires gitanos</i> o la <i>Fantasía sobre Carmen</i>, inspiró a Lalo, Bruch y Saint-Saëns, que escribieron para él algunas de las páginas esenciales del repertorio para violín.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="programa" class="alt">
     <div class="wrap">
       <div class="sec-head">
         <div><div class="label">Programa</div><h2>Siete días de violín</h2></div>
-        <p class="sec-sub">Elige un día para ver sus conciertos y clases.</p>
+        <p class="sec-sub">Del lunes 8 al domingo 14 de marzo de 2027</p>
       </div>
-      <p class="notice" id="notice" hidden>Programa provisional: los eventos que ves son de ejemplo y se sustituirán por los de la hoja de cálculo del festival.</p>
-      <ol class="days" id="days" aria-label="Días del festival, 8 a 14 de marzo de 2027"></ol>
-    </div>
-  </section>
-
-  <section id="artista" class="alt">
-    <div class="wrap guest-grid">
-      <div class="portrait"><div class="initials">MC</div><div class="cap">Miguel Colom</div></div>
-      <div>
-        <div class="label">Artista invitado 2027</div>
-        <h2>Miguel Colom</h2>
-        <div class="role"><span class="chip">Violín</span><span class="chip">Profesor del festival</span></div>
-        <p>Miguel Colom, concertino de la Orquesta Nacional de España, es uno de los artistas invitados de la segunda edición del festival. Durante la semana actuará en concierto e impartirá clases magistrales a los alumnos del festival.</p>
-        <p>Consulta en el programa las fechas de sus conciertos y clases abiertas al público.</p>
-        <a class="btn" href="#programa">Ver sus fechas</a>
-      </div>
-    </div>
-    <div class="wrap guest-grid">
-      <div class="portrait"><div class="initials">HK</div><div class="cap">Hande Küden</div></div>
-      <div>
-        <div class="label">Artista invitada 2027</div>
-        <h2>Hande Küden</h2>
-        <div class="role"><span class="chip">Violín</span><span class="chip">Filarmónica de Berlín</span></div>
-        <p>Hande Küden, violinista de la Filarmónica de Berlín, es una de las artistas invitadas de la segunda edición del festival.</p>
-        <p>Consulta en el programa las fechas de sus conciertos.</p>
-        <a class="btn" href="#programa">Ver sus fechas</a>
+      <p class="demo-note" id="demoNote" hidden>Vista de prueba con eventos de ejemplo (?demo). El público no ve estos eventos.</p>
+      <ol class="days is-pending" id="days" aria-label="Días del festival, 8 a 14 de marzo de 2027"></ol>
+      <div class="pending-note" id="pendingNote">
+        <p><strong>Programa completo, próximamente</strong>Publicaremos aquí todos los conciertos y clases, con horarios y venta de entradas.</p>
+        <a class="link" href="mailto:info@festivalsarasate.com?subject=Aviso%20programa%202027">Avísame cuando se publique <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section id="informacion">
+  <section id="artistas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><div class="label">Edición 2027</div><h2>Artistas invitados</h2></div>
+      </div>
+      <div class="artists">
+        <!-- Cuando haya fotos: añade <img src="fotos/miguel-colom.jpg" alt="Miguel Colom"> al principio de cada <article> -->
+        <article class="artist">
+          <span class="instr">Violín</span>
+          <h3>Miguel Colom</h3>
+          <p class="role">Concertino de la Orquesta Nacional de España</p>
+          <p>Miguel Colom es concertino de la Orquesta Nacional de España. Durante la semana del festival actuará en concierto e impartirá clases magistrales a los alumnos del festival.</p>
+        </article>
+        <article class="artist">
+          <span class="instr">Violín</span>
+          <h3>Hande Küden</h3>
+          <p class="role">Violinista de la Filarmónica de Berlín</p>
+          <p>Hande Küden es violinista de la Orquesta Filarmónica de Berlín. Participa en la segunda edición del festival como artista invitada en los conciertos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="informacion" class="alt">
     <div class="wrap">
       <div class="sec-head">
         <div><div class="label">Información</div><h2>Sedes del festival</h2></div>
       </div>
       <div class="info-grid">
-        <div><div class="label">Conciertos</div><h3>Catedral de Pamplona</h3><p>Casco Antiguo, Pamplona</p></div>
-        <div><div class="label">Clases y conciertos</div><h3>Conservatorio Pablo Sarasate</h3><p>Pamplona</p></div>
+        <div><div class="label">Conciertos</div><h3>Catedral de Pamplona</h3><p>Casco Antiguo, Pamplona</p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Catedral+de+Pamplona" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">→</span></a></div>
+        <div><div class="label">Clases y conciertos</div><h3>Conservatorio Pablo Sarasate</h3><p>Pamplona</p><a class="link" href="https://www.google.com/maps/search/?api=1&query=Conservatorio+Profesional+de+M%C3%BAsica+Pablo+Sarasate+Pamplona" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">→</span></a></div>
         <div><div class="label">Conciertos</div><h3>Civivox</h3><p>Pamplona</p></div>
       </div>
       <div class="partners">
@@ -120,7 +204,7 @@
 
   <section id="contacto">
     <div class="wrap contact">
-      <div><div class="label">Contacto</div><h2>¿Preguntas sobre el festival?</h2></div>
+      <div><h2>¿Preguntas sobre el festival?</h2><p>Información general, prensa y patrocinio.</p></div>
       <a class="mail" href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a>
     </div>
   </section>
@@ -128,36 +212,62 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><img src="logo.png" alt="" width="34" height="32"><span>Festival Internacional de Violín Pablo Sarasate</span></span>
-    <span>© 2027 · Pamplona, Navarra</span>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="logo.png" alt="" width="52" height="49">
+        <div><b>Festival Internacional de Violín Pablo Sarasate</b><p>Segunda edición · Pamplona, 8 – 14 de marzo de 2027</p></div>
+      </div>
+      <div>
+        <span class="label">Festival</span>
+        <ul>
+          <li><a href="#programa">Programa</a></li>
+          <li><a href="#artistas">Artistas invitados</a></li>
+          <li><a href="inscripcion.html">Masterclasses</a></li>
+          <li><a href="edicionesanteriores.html">Ediciones anteriores</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Contacto</span>
+        <ul>
+          <li><a href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a></li>
+          <li>Pamplona, Navarra</li>
+          <li>Organiza: Fundación Diario de Navarra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Festival Internacional de Violín Pablo Sarasate</span>
+      <nav aria-label="Legal"><a href="legal.html">Aviso legal y privacidad</a><a href="en/index.html" hreflang="en" lang="en">English</a></nav>
+    </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="vendor/papaparse.min.js"></script>
 <script src="programa.js"></script>
 <script>
-/* Tarjetas de días: cada una abre dia.html con la información de ese día */
-function renderDays(events){
-  const P = Programa;
-  document.getElementById('days').innerHTML = P.days.map(d => {
+/* Tarjetas de días. Sin programa publicado: tira compacta de fechas y aviso. */
+function renderDays(events, status){
+  const P = Programa, t = P.t, pending = status === 'pending';
+  const ol = document.getElementById('days');
+  ol.classList.toggle('is-pending', pending);
+  ol.innerHTML = P.days.map(d => {
+    const date = `<span class="dc-date"><span class="dow">${P.DOW[d.getDay()]}</span><span class="num">${d.getDate()}</span><span class="mon">${P.MES[d.getMonth()]}</span></span>`;
+    if (pending) return `<li><div class="daycard">${date}</div></li>`;
     const evs = P.forDay(events, P.iso(d));
     const items = evs.length
-      ? '<ul>' + evs.slice(0,3).map(e => `<li><time>${P.esc(e.hora)}</time> ${P.esc(e.titulo)}</li>`).join('') + (evs.length > 3 ? `<li class="more">+${evs.length-3} más</li>` : '') + '</ul>'
-      : '<p class="none">Sin eventos programados</p>';
-    const count = evs.length ? `${evs.length} ${evs.length === 1 ? 'evento' : 'eventos'}` : '';
+      ? '<ul>' + evs.slice(0,3).map(e => `<li><time>${P.esc(e.hora)}</time> ${P.esc(e.titulo)}</li>`).join('') + (evs.length > 3 ? `<li class="more">+${evs.length-3} ${t.more}</li>` : '') + '</ul>'
+      : `<p class="none">${t.none}</p>`;
+    const count = evs.length ? `${evs.length} ${evs.length === 1 ? t.event : t.events}` : '';
     return `<li><a class="daycard${evs.length ? '' : ' is-empty'}" href="${P.dayUrl(d)}">
-      <span class="dc-date"><span class="dow">${P.DOW[d.getDay()]}</span><span class="num">${d.getDate()}</span><span class="mon">marzo</span></span>
+      ${date}
       <span class="dc-body"><span class="count">${count}</span>${items}</span>
-      <span class="dc-go">Ver el día <span aria-hidden="true">→</span></span>
+      <span class="dc-go">${t.seeDay} <span aria-hidden="true">→</span></span>
     </a></li>`;
   }).join('');
+  document.getElementById('pendingNote').hidden = !pending;
+  document.getElementById('demoNote').hidden = status !== 'demo';
 }
-renderDays([]);
-Programa.load((events, isSample) => { document.getElementById('notice').hidden = !isSample; renderDays(events); });
-
-/* Foto de portada con alternativa si no carga */
-const hero = document.getElementById('hero'), photo = document.getElementById('heroPhoto');
-if (CONFIG.HERO_IMAGE) { photo.addEventListener('error', () => hero.classList.add('no-photo')); photo.src = CONFIG.HERO_IMAGE; } else hero.classList.add('no-photo');
+renderDays([], 'pending');
+Programa.load(renderDays);
 </script>
 </body>
 </html>
