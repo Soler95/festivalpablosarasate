@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Daily programme · Pablo Sarasate Festival</title>
+<meta name="description" content="Daily programme of the Pablo Sarasate International Violin Festival, Pamplona, 8 – 14 March 2027.">
+<meta name="theme-color" content="#141312">
+<link rel="icon" href="../favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pablo Sarasate International Violin Festival">
+<meta property="og:title" content="Daily programme · Pablo Sarasate Festival">
+<meta property="og:description" content="Daily programme of the Pablo Sarasate International Violin Festival, Pamplona, 8 – 14 March 2027.">
+<meta property="og:image" content="../og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Pablo Sarasate International Violin Festival, home">
+      <img src="../logo.png" alt="" width="44" height="42">
+      <span><b>Pablo Sarasate</b>International Violin Festival</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html#festival">The festival</a></li>
+      <li><a href="index.html#programa" aria-current="page">Programme</a></li>
+      <li><a href="index.html#artistas">Artists</a></li>
+      <li class="has-sub">
+        <button id="subbtn" aria-expanded="false" aria-controls="submenu">Past editions</button>
+        <ul class="sub" id="submenu" hidden>
+          <li><a href="past-editions.html">All editions</a></li>
+          <li><span class="label">Guest artists</span></li>
+          <li><a href="past-editions.html#jiyoon-lee">Jiyoon Lee</a></li>
+          <li><a href="past-editions.html#marlene-ito">Marlene Ito</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#informacion">Information</a></li>
+      <li class="lang"><a href="../dia.html" hreflang="es" lang="es" aria-label="Versión en español" data-keep-hash>ES</a></li>
+      <li><a class="btn" href="masterclasses.html">Masterclasses</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <a class="back" href="index.html#programa">← Full programme</a>
+      <div class="label">Pablo Sarasate Festival · Pamplona 2027</div>
+      <h1 id="dTitle">Daily programme</h1>
+      <p id="dSub"></p>
+      <nav class="daystrip" id="strip" aria-label="Festival days"></nav>
+    </div>
+  </div>
+  <section class="day-events">
+    <div class="wrap">
+      <p class="demo-note" id="demoNote" hidden>Preview with sample events (?demo). Visitors do not see these events.</p>
+      <ol class="events" id="events"></ol>
+      <nav class="daynav" id="daynav" aria-label="Previous and next day"></nav>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="../logo.png" alt="" width="52" height="49">
+        <div><b>Pablo Sarasate International Violin Festival</b><p>Second edition · Pamplona, 8 – 14 March 2027</p></div>
+      </div>
+      <div>
+        <span class="label">Festival</span>
+        <ul>
+          <li><a href="index.html#programa">Programme</a></li>
+          <li><a href="index.html#artistas">Guest artists</a></li>
+          <li><a href="masterclasses.html">Masterclasses</a></li>
+          <li><a href="past-editions.html">Past editions</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="label">Contact</span>
+        <ul>
+          <li><a href="mailto:info@festivalsarasate.com">info@festivalsarasate.com</a></li>
+          <li>Pamplona, Navarre, Spain</li>
+          <li>Organised by Fundación Diario de Navarra</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Pablo Sarasate International Violin Festival</span>
+      <nav aria-label="Legal"><a href="legal.html">Legal notice and privacy</a><a href="../dia.html" hreflang="es" lang="es" data-keep-hash>Español</a></nav>
+    </div>
+  </div>
+</footer>
+<script src="../vendor/papaparse.min.js"></script>
+<script src="../programa.js"></script>
+<script>
+const P = Programa, t = P.t;
+let EVENTS = [], STATUS = 'pending';
+
+function currentKey(){
+  const k = decodeURIComponent(location.hash.replace('#',''));
+  return P.days.some(d => P.iso(d) === k) ? k : P.iso(P.days[0]);
+}
+
+function render(){
+  const key = currentKey(), idx = P.days.findIndex(d => P.iso(d) === key), d = P.days[idx];
+  const evs = P.forDay(EVENTS, key);
+  document.title = `${P.longDate(d)} · ${t.title}`;
+  document.getElementById('dTitle').textContent = P.longDate(d);
+  document.getElementById('dSub').textContent = (evs.length ? `${evs.length} ${evs.length === 1 ? t.event : t.events} · ` : '') + t.dayOf(idx+1, P.days.length);
+  const q = STATUS === 'demo' ? '?demo' : '';
+
+  document.getElementById('strip').innerHTML = P.days.map(x => {
+    const k = P.iso(x), n = P.forDay(EVENTS, k).length;
+    return `<a href="${q}#${k}"${k === key ? ' aria-current="page"' : ''} class="${n ? '' : 'is-empty'}"><span>${P.DOW[x.getDay()]}</span><b>${x.getDate()}</b></a>`;
+  }).join('');
+
+  document.getElementById('events').innerHTML = evs.length ? evs.map(e => `<li class="ev">
+      <div class="d"><b>${P.esc(e.hora)}</b></div>
+      <div class="info">
+        ${e.tipo ? `<div class="tipo">${P.esc(e.tipo)}</div>` : ''}
+        <h2>${P.esc(e.titulo)}</h2>
+        ${e.artistas ? `<p class="who">${P.esc(e.artistas)}</p>` : ''}
+        ${e.lugar ? `<p class="where">${P.esc(e.lugar)}</p>` : ''}
+        ${e.descripcion ? `<p class="desc">${P.esc(e.descripcion)}</p>` : ''}
+      </div>
+      <div class="buy">${e.precio ? `<span class="price">${P.esc(e.precio)}</span>` : ''}${e.entradas ? `<a class="btn" href="${P.esc(e.entradas)}" target="_blank" rel="noopener">${t.tickets}</a>` : ''}</div>
+    </li>`).join('')
+    : (STATUS === 'pending'
+        ? `<li class="empty">${t.pendingDay} <a href="index.html#programa">${t.backProgram}</a>.</li>`
+        : `<li class="empty">${t.emptyDay} <a href="index.html#programa">${t.seeRest}</a>.</li>`);
+
+  const prev = P.days[idx-1], next = P.days[idx+1];
+  document.getElementById('daynav').innerHTML =
+    (prev ? `<a href="${q}#${P.iso(prev)}">← ${P.longDate(prev)}</a>` : '<span></span>') +
+    (next ? `<a href="${q}#${P.iso(next)}">${P.longDate(next)} →</a>` : '<span></span>');
+}
+
+window.addEventListener('hashchange', () => { render(); window.scrollTo({top: 0}); });
+render();
+P.load((events, status) => { EVENTS = events; STATUS = status; document.getElementById('demoNote').hidden = status !== 'demo'; render(); });
+</script>
+</body>
+</html>
