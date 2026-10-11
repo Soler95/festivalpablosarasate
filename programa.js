@@ -22,7 +22,7 @@
    ============================================================ */
 const CONFIG = {
   SHEET_CSV_URL: '',
-  HERO_IMAGE: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ayuntamiento_de_Pamplona,_Pamplona_(ES)_-_panoramio.jpg?width=2400',
+  HERO_IMAGE: 'https://commons.wikimedia.org/wiki/Special:FilePath/WP_Pablo_de_Sarasate.jpg',
   FORM_URL: '',
   START: '2027-03-08',
   DAYS: 7
