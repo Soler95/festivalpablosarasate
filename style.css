@@ -233,6 +233,10 @@ a.daycard:hover :is(.count,.dc-go),a.daycard:focus-visible :is(.count,.dc-go){co
 .partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px 48px;margin-top:clamp(48px,6vw,72px);padding:32px 0 0;border-top:1px solid var(--line)}
 .partners div{display:flex;flex-direction:column;gap:6px}
 .partners .n{font-family:var(--font-display);font-size:clamp(22px,2.2vw,28px);line-height:1.15}
+.partners .logo{display:block;width:auto;max-width:100%;align-self:flex-start;margin-top:4px}
+.partners .logo-lk{height:clamp(40px,4vw,50px)}
+.partners .logo-nh{height:clamp(40px,4vw,50px)}
+.partners .logo-note{font-size:14px;color:var(--muted)}
 
 /* ── Contacto ── */
 .contact{display:flex;justify-content:space-between;align-items:end;gap:24px 32px;flex-wrap:wrap}
